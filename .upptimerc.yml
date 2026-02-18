@@ -2,32 +2,28 @@ owner: Rentr-UK
 repo: Rentmigo-uptime
 
 sites:
-  # Production
+  # Production (uses Vercel protection bypass to avoid rate limiting)
   - name: "[Prod] Website"
     url: https://rentmigo.co.uk
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
   - name: "[Prod] Login"
     url: https://rentmigo.co.uk/login
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
-  - name: "[Prod] Auth API"
-    url: https://rentmigo.co.uk/api/auth
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 401
-      - 429
-  - name: "[Prod] Health Check"
+  - name: "[Prod] API Health Check"
     url: https://rentmigo.co.uk/api/v1/health
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
 
   # Staging (uses Vercel protection bypass header)
   - name: "[Staging] Website"
@@ -44,21 +40,31 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
-  - name: "[Staging] Auth API"
-    url: https://staging.rentmigo.co.uk/api/auth
-    headers:
-      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 401
-  - name: "[Staging] Health Check"
+  - name: "[Staging] API Health Check"
     url: https://staging.rentmigo.co.uk/api/v1/health
     headers:
       - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
+
+  # Core Services (third-party dependencies)
+  - name: Vercel
+    url: https://www.vercel-status.com/api/v2/status.json
+    expectedStatusCodes:
+      - 200
+  - name: Neon
+    url: https://neonstatus.com
+    expectedStatusCodes:
+      - 200
+  - name: Stripe
+    url: https://status.stripe.com/current
+    expectedStatusCodes:
+      - 200
+  - name: Inngest
+    url: https://status.inngest.com/api/v2/status.json
+    expectedStatusCodes:
+      - 200
 
 status-website:
   baseUrl: /Rentmigo-uptime
