@@ -1,7 +1,7 @@
-url: https://neonstatus.com
+url: https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c
 status: up
 code: 200
-responseTime: 213
-lastUpdated: 2026-02-18T22:47:48.929Z
+responseTime: 251
+lastUpdated: 2026-02-18T22:58:13.355Z
 startTime: 2026-02-18T22:47:48.712Z
 generator: Upptime <https://github.com/upptime/upptime>
