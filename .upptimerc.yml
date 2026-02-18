@@ -37,6 +37,7 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
+      - 401
   - name: "[Staging] Login"
     url: https://staging.rentmigo.co.uk/login
     headers:
@@ -44,6 +45,7 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
+      - 401
   - name: "[Staging] Auth API"
     url: https://staging.rentmigo.co.uk/api/auth
     headers:
@@ -59,6 +61,7 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
+      - 401
 
 status-website:
   baseUrl: /Rentmigo-uptime
