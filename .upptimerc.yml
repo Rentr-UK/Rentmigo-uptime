@@ -48,6 +48,24 @@ sites:
       - 200
       - 301
 
+  # Core Services (third-party dependencies)
+  - name: Vercel
+    url: https://www.vercel-status.com/api/v2/status.json
+    expectedStatusCodes:
+      - 200
+  - name: Neon
+    url: https://neonstatus.com
+    expectedStatusCodes:
+      - 200
+  - name: Stripe
+    url: https://status.stripe.com/current
+    expectedStatusCodes:
+      - 200
+  - name: Inngest
+    url: https://status.inngest.com/api/v2/status.json
+    expectedStatusCodes:
+      - 200
+
 status-website:
   baseUrl: /Rentmigo-uptime
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
