@@ -1,7 +1,7 @@
 url: https://staging.rentmigo.co.uk/login
-status: up
+status: down
 code: 401
-responseTime: 24
-lastUpdated: 2026-02-18T20:41:06.745Z
+responseTime: 26
+lastUpdated: 2026-02-18T20:49:11.746Z
 startTime: 2026-02-18T20:41:06.720Z
 generator: Upptime <https://github.com/upptime/upptime>
