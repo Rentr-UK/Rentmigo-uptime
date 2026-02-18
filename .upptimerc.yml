@@ -2,32 +2,36 @@ owner: Rentr-UK
 repo: Rentmigo-uptime
 
 sites:
-  # Production
+  # Production (uses Vercel protection bypass to avoid rate limiting)
   - name: "[Prod] Website"
     url: https://rentmigo.co.uk
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
   - name: "[Prod] Login"
     url: https://rentmigo.co.uk/login
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
   - name: "[Prod] Auth API"
     url: https://rentmigo.co.uk/api/auth/session
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
       - 401
-      - 429
   - name: "[Prod] Health Check"
     url: https://rentmigo.co.uk/api/v1/health
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 429
 
   # Staging (uses Vercel protection bypass header)
   - name: "[Staging] Website"
