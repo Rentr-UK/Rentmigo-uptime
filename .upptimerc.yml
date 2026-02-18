@@ -54,7 +54,7 @@ sites:
     expectedStatusCodes:
       - 200
   - name: Neon
-    url: https://neonstatus.com
+    url: https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c
     expectedStatusCodes:
       - 200
   - name: Stripe
