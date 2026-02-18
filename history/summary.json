@@ -54,23 +54,41 @@
     "dailyMinutesDown": {}
   },
   {
+    "name": "[Prod] Health Check",
+    "url": "https://rentmigo.co.uk/api/v1/health",
+    "icon": "https://icons.duckduckgo.com/ip3/rentmigo.co.uk.ico",
+    "slug": "prod-health-check",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 32,
+    "timeDay": 32,
+    "timeWeek": 32,
+    "timeMonth": 32,
+    "timeYear": 32,
+    "dailyMinutesDown": {}
+  },
+  {
     "name": "[Staging] Website",
     "url": "https://staging.rentmigo.co.uk",
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-website",
     "status": "up",
-    "uptime": "96.79%",
-    "uptimeDay": "96.79%",
-    "uptimeWeek": "96.79%",
-    "uptimeMonth": "96.79%",
-    "uptimeYear": "96.79%",
+    "uptime": "9.18%",
+    "uptimeDay": "9.18%",
+    "uptimeWeek": "9.18%",
+    "uptimeMonth": "9.18%",
+    "uptimeYear": "9.18%",
     "time": 315,
     "timeDay": 315,
     "timeWeek": 315,
     "timeMonth": 315,
     "timeYear": 315,
     "dailyMinutesDown": {
-      "2026-02-18": 0
+      "2026-02-18": 82
     }
   },
   {
@@ -79,18 +97,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-login",
     "status": "up",
-    "uptime": "97.39%",
-    "uptimeDay": "97.39%",
-    "uptimeWeek": "97.39%",
-    "uptimeMonth": "97.39%",
-    "uptimeYear": "97.39%",
+    "uptime": "9.18%",
+    "uptimeDay": "9.18%",
+    "uptimeWeek": "9.18%",
+    "uptimeMonth": "9.18%",
+    "uptimeYear": "9.18%",
     "time": 106,
     "timeDay": 106,
     "timeWeek": 106,
     "timeMonth": 106,
     "timeYear": 106,
     "dailyMinutesDown": {
-      "2026-02-18": 0
+      "2026-02-18": 82
     }
   },
   {
@@ -99,16 +117,38 @@
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-auth-api",
     "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "99.83%",
+    "uptimeDay": "99.83%",
+    "uptimeWeek": "99.83%",
+    "uptimeMonth": "99.83%",
+    "uptimeYear": "99.83%",
     "time": 40,
     "timeDay": 40,
     "timeWeek": 40,
     "timeMonth": 40,
     "timeYear": 40,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-18": 0
+    }
+  },
+  {
+    "name": "[Staging] Health Check",
+    "url": "https://staging.rentmigo.co.uk/api/v1/health",
+    "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
+    "slug": "staging-health-check",
+    "status": "up",
+    "uptime": "8.18%",
+    "uptimeDay": "8.18%",
+    "uptimeWeek": "8.18%",
+    "uptimeMonth": "8.18%",
+    "uptimeYear": "8.18%",
+    "time": 31,
+    "timeDay": 31,
+    "timeWeek": 31,
+    "timeMonth": 31,
+    "timeYear": 31,
+    "dailyMinutesDown": {
+      "2026-02-18": 0
+    }
   }
 ]
