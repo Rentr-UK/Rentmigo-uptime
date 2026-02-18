@@ -22,6 +22,12 @@ sites:
       - 301
       - 401
       - 429
+  - name: "[Prod] Health Check"
+    url: https://rentmigo.co.uk/api/v1/health
+    expectedStatusCodes:
+      - 200
+      - 301
+      - 429
 
   # Staging (uses Vercel protection bypass header)
   - name: "[Staging] Website"
@@ -46,6 +52,13 @@ sites:
       - 200
       - 301
       - 401
+  - name: "[Staging] Health Check"
+    url: https://staging.rentmigo.co.uk/api/v1/health
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
+    expectedStatusCodes:
+      - 200
+      - 301
 
 status-website:
   baseUrl: /Rentmigo-uptime
