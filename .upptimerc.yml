@@ -16,7 +16,7 @@ sites:
       - 301
       - 429
   - name: "[Prod] Auth API"
-    url: https://rentmigo.co.uk/api/auth
+    url: https://rentmigo.co.uk/api/auth/session
     expectedStatusCodes:
       - 200
       - 301
@@ -28,37 +28,6 @@ sites:
       - 200
       - 301
       - 429
-
-  # Staging (uses Vercel protection bypass header)
-  - name: "[Staging] Website"
-    url: https://staging.rentmigo.co.uk
-    headers:
-      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
-    expectedStatusCodes:
-      - 200
-      - 301
-  - name: "[Staging] Login"
-    url: https://staging.rentmigo.co.uk/login
-    headers:
-      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
-    expectedStatusCodes:
-      - 200
-      - 301
-  - name: "[Staging] Auth API"
-    url: https://staging.rentmigo.co.uk/api/auth
-    headers:
-      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 401
-  - name: "[Staging] Health Check"
-    url: https://staging.rentmigo.co.uk/api/v1/health
-    headers:
-      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
-    expectedStatusCodes:
-      - 200
-      - 301
 
 status-website:
   baseUrl: /Rentmigo-uptime
