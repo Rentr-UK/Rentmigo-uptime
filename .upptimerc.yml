@@ -22,51 +22,43 @@ sites:
       - 301
       - 401
       - 429
-  - name: "[Prod] Landlord API"
-    url: https://rentmigo.co.uk/api/v1/landlord
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 401
-      - 429
   - name: "[Prod] Health Check"
-    url: https://rentmigo.co.uk/api/health
+    url: https://rentmigo.co.uk/api/v1/health
     expectedStatusCodes:
       - 200
       - 301
       - 429
 
-  # Staging
+  # Staging (uses Vercel protection bypass header)
   - name: "[Staging] Website"
     url: https://staging.rentmigo.co.uk
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 401
   - name: "[Staging] Login"
     url: https://staging.rentmigo.co.uk/login
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 401
   - name: "[Staging] Auth API"
     url: https://staging.rentmigo.co.uk/api/auth
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 401
-  - name: "[Staging] Landlord API"
-    url: https://staging.rentmigo.co.uk/api/v1/landlord
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
       - 401
   - name: "[Staging] Health Check"
-    url: https://staging.rentmigo.co.uk/api/health
+    url: https://staging.rentmigo.co.uk/api/v1/health
+    headers:
+      - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
     expectedStatusCodes:
       - 200
       - 301
-      - 401
 
 status-website:
   baseUrl: /Rentmigo-uptime
