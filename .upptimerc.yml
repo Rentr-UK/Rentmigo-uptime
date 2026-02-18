@@ -1,36 +1,39 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: Rentr-UK
+repo: Rentmigo-uptime
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  # Production
+  - name: "[Prod] Website"
+    url: https://rentmigo.co.uk
+  - name: "[Prod] Login"
+    url: https://rentmigo.co.uk/login
+  - name: "[Prod] Auth API"
+    url: https://rentmigo.co.uk/api/auth
+  - name: "[Prod] Landlord API"
+    url: https://rentmigo.co.uk/api/v1/landlord
+  - name: "[Prod] Health Check"
+    url: https://rentmigo.co.uk/api/health
+
+  # Staging
+  - name: "[Staging] Website"
+    url: https://staging.rentmigo.co.uk
+  - name: "[Staging] Login"
+    url: https://staging.rentmigo.co.uk/login
+  - name: "[Staging] Auth API"
+    url: https://staging.rentmigo.co.uk/api/auth
+  - name: "[Staging] Landlord API"
+    url: https://staging.rentmigo.co.uk/api/v1/landlord
+  - name: "[Staging] Health Check"
+    url: https://staging.rentmigo.co.uk/api/health
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  baseUrl: /Rentmigo-uptime
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Rentr UK Status
+  introTitle: "**Rentr UK** uptime monitor and status page."
+  introMessage: Real-time uptime data for Rentr UK services. Target uptime 99.5%.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
