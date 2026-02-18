@@ -17,7 +17,7 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
-  - name: "[Prod] Health Check"
+  - name: "[Prod] API Health Check"
     url: https://rentmigo.co.uk/api/v1/health
     headers:
       - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
@@ -40,7 +40,7 @@ sites:
     expectedStatusCodes:
       - 200
       - 301
-  - name: "[Staging] Health Check"
+  - name: "[Staging] API Health Check"
     url: https://staging.rentmigo.co.uk/api/v1/health
     headers:
       - "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET"
