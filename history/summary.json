@@ -4,9 +4,9 @@
     "url": "https://rentmigo.co.uk",
     "icon": "https://icons.duckduckgo.com/ip3/rentmigo.co.uk.ico",
     "slug": "prod-website",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -15,16 +15,18 @@
     "timeWeek": 625,
     "timeMonth": 625,
     "timeYear": 625,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "[Prod] Login",
     "url": "https://rentmigo.co.uk/login",
     "icon": "https://icons.duckduckgo.com/ip3/rentmigo.co.uk.ico",
     "slug": "prod-login",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -33,16 +35,18 @@
     "timeWeek": 256,
     "timeMonth": 256,
     "timeYear": 256,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "[Prod] API Health Check",
     "url": "https://rentmigo.co.uk/api/v1/health",
     "icon": "https://icons.duckduckgo.com/ip3/rentmigo.co.uk.ico",
     "slug": "prod-api-health-check",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -51,16 +55,18 @@
     "timeWeek": 1018,
     "timeMonth": 1018,
     "timeYear": 1018,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "[Staging] Website",
     "url": "https://staging.rentmigo.co.uk",
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-website",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -69,16 +75,18 @@
     "timeWeek": 1610,
     "timeMonth": 1610,
     "timeYear": 1610,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "[Staging] Login",
     "url": "https://staging.rentmigo.co.uk/login",
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-login",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -87,16 +95,18 @@
     "timeWeek": 468,
     "timeMonth": 468,
     "timeYear": 468,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "[Staging] API Health Check",
     "url": "https://staging.rentmigo.co.uk/api/v1/health",
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-api-health-check",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -105,7 +115,9 @@
     "timeWeek": 1855,
     "timeMonth": 1855,
     "timeYear": 1855,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "Vercel",
@@ -166,9 +178,9 @@
     "url": "https://status.inngest.com/api/v2/status.json",
     "icon": "https://icons.duckduckgo.com/ip3/status.inngest.com.ico",
     "slug": "inngest",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -177,6 +189,8 @@
     "timeWeek": 439,
     "timeMonth": 439,
     "timeYear": 439,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   }
 ]
