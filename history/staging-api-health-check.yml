@@ -1,7 +1,7 @@
 url: https://staging.rentmigo.co.uk/api/v1/health
-status: down
-code: 503
-responseTime: 1793
-lastUpdated: 2026-04-27T10:25:05.562Z
+status: up
+code: 200
+responseTime: 2865
+lastUpdated: 2026-04-27T12:08:12.079Z
 startTime: 2026-02-18T22:46:06.308Z
 generator: Upptime <https://github.com/upptime/upptime>
