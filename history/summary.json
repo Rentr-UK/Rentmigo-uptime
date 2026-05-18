@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 1271,
-    "timeDay": 1457,
-    "timeWeek": 1470,
-    "timeMonth": 1417,
-    "timeYear": 1271,
+    "time": 1279,
+    "timeDay": 2054,
+    "timeWeek": 1560,
+    "timeMonth": 1439,
+    "timeYear": 1279,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 408,
-    "timeDay": 714,
-    "timeWeek": 576,
-    "timeMonth": 508,
-    "timeYear": 408,
+    "time": 413,
+    "timeDay": 806,
+    "timeWeek": 615,
+    "timeMonth": 517,
+    "timeYear": 413,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 1174,
-    "timeDay": 593,
-    "timeWeek": 874,
-    "timeMonth": 1329,
-    "timeYear": 1174,
+    "time": 1167,
+    "timeDay": 482,
+    "timeWeek": 837,
+    "timeMonth": 1264,
+    "timeYear": 1167,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -70,11 +70,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 3599,
-    "timeDay": 4886,
-    "timeWeek": 4547,
-    "timeMonth": 4189,
-    "timeYear": 3599,
+    "time": 3612,
+    "timeDay": 4787,
+    "timeWeek": 4649,
+    "timeMonth": 4208,
+    "timeYear": 3612,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -90,11 +90,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 568,
-    "timeDay": 702,
-    "timeWeek": 634,
-    "timeMonth": 617,
-    "timeYear": 568,
+    "time": 574,
+    "timeDay": 1192,
+    "timeWeek": 733,
+    "timeMonth": 632,
+    "timeYear": 574,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -105,16 +105,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-api-health-check",
     "status": "up",
-    "uptime": "99.83%",
+    "uptime": "99.84%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.76%",
-    "uptimeYear": "99.83%",
-    "time": 2643,
-    "timeDay": 3117,
-    "timeWeek": 3579,
-    "timeMonth": 2709,
-    "timeYear": 2643,
+    "uptimeYear": "99.84%",
+    "time": 2646,
+    "timeDay": 2959,
+    "timeWeek": 3551,
+    "timeMonth": 2726,
+    "timeYear": 2646,
     "dailyMinutesDown": {
       "2026-04-27": 103,
       "2026-04-11": 61,
@@ -132,11 +132,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.92%",
-    "time": 483,
-    "timeDay": 267,
-    "timeWeek": 221,
+    "time": 480,
+    "timeDay": 189,
+    "timeWeek": 199,
     "timeMonth": 205,
-    "timeYear": 483,
+    "timeYear": 480,
     "dailyMinutesDown": {
       "2026-04-09": 100
     }
@@ -152,11 +152,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 406,
-    "timeDay": 212,
-    "timeWeek": 330,
-    "timeMonth": 329,
-    "timeYear": 406,
+    "time": 404,
+    "timeDay": 214,
+    "timeWeek": 302,
+    "timeMonth": 333,
+    "timeYear": 404,
     "dailyMinutesDown": {}
   },
   {
@@ -171,9 +171,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 196,
-    "timeDay": 165,
-    "timeWeek": 226,
-    "timeMonth": 211,
+    "timeDay": 175,
+    "timeWeek": 209,
+    "timeMonth": 212,
     "timeYear": 196,
     "dailyMinutesDown": {}
   },
@@ -188,11 +188,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 350,
-    "timeDay": 347,
-    "timeWeek": 332,
-    "timeMonth": 325,
-    "timeYear": 350,
+    "time": 351,
+    "timeDay": 358,
+    "timeWeek": 334,
+    "timeMonth": 327,
+    "timeYear": 351,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
