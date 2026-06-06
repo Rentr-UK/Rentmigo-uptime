@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 1320,
-    "timeDay": 1431,
-    "timeWeek": 1407,
-    "timeMonth": 1537,
-    "timeYear": 1320,
+    "time": 1321,
+    "timeDay": 1428,
+    "timeWeek": 1369,
+    "timeMonth": 1515,
+    "timeYear": 1321,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 442,
-    "timeDay": 651,
-    "timeWeek": 564,
-    "timeMonth": 604,
-    "timeYear": 442,
+    "time": 444,
+    "timeDay": 695,
+    "timeWeek": 585,
+    "timeMonth": 615,
+    "timeYear": 444,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 1130,
-    "timeDay": 1031,
-    "timeWeek": 772,
-    "timeMonth": 1022,
-    "timeYear": 1130,
+    "time": 1131,
+    "timeDay": 1137,
+    "timeWeek": 923,
+    "timeMonth": 1039,
+    "timeYear": 1131,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -70,11 +70,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 3728,
-    "timeDay": 4508,
-    "timeWeek": 4527,
-    "timeMonth": 4417,
-    "timeYear": 3728,
+    "time": 3740,
+    "timeDay": 4824,
+    "timeWeek": 4623,
+    "timeMonth": 4448,
+    "timeYear": 3740,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -90,11 +90,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 593,
-    "timeDay": 1351,
-    "timeWeek": 684,
-    "timeMonth": 678,
-    "timeYear": 593,
+    "time": 596,
+    "timeDay": 1192,
+    "timeWeek": 767,
+    "timeMonth": 696,
+    "timeYear": 596,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -105,16 +105,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/staging.rentmigo.co.uk.ico",
     "slug": "staging-api-health-check",
     "status": "up",
-    "uptime": "99.86%",
+    "uptime": "99.87%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.86%",
-    "time": 2639,
-    "timeDay": 2697,
-    "timeWeek": 2816,
-    "timeMonth": 2928,
-    "timeYear": 2639,
+    "uptimeYear": "99.87%",
+    "time": 2640,
+    "timeDay": 2713,
+    "timeWeek": 2817,
+    "timeMonth": 2937,
+    "timeYear": 2640,
     "dailyMinutesDown": {
       "2026-02-23": 44,
       "2026-04-11": 61,
@@ -126,22 +126,23 @@
     "url": "https://www.vercel-status.com/api/v2/status.json",
     "icon": "https://icons.duckduckgo.com/ip3/www.vercel-status.com.ico",
     "slug": "vercel",
-    "status": "up",
+    "status": "down",
     "uptime": "99.52%",
-    "uptimeDay": "84.69%",
+    "uptimeDay": "88.41%",
     "uptimeWeek": "93.60%",
     "uptimeMonth": "98.53%",
     "uptimeYear": "99.52%",
-    "time": 415,
-    "timeDay": 123,
-    "timeWeek": 140,
-    "timeMonth": 185,
-    "timeYear": 415,
+    "time": 411,
+    "timeDay": 124,
+    "timeWeek": 133,
+    "timeMonth": 181,
+    "timeYear": 411,
     "dailyMinutesDown": {
       "2026-04-09": 100,
       "2026-06-03": 424,
       "2026-06-05": 181,
-      "2026-06-04": 40
+      "2026-06-04": 40,
+      "2026-06-06": 0
     }
   },
   {
@@ -155,11 +156,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 391,
-    "timeDay": 397,
-    "timeWeek": 305,
-    "timeMonth": 331,
-    "timeYear": 391,
+    "time": 390,
+    "timeDay": 329,
+    "timeWeek": 286,
+    "timeMonth": 325,
+    "timeYear": 390,
     "dailyMinutesDown": {}
   },
   {
@@ -173,11 +174,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 191,
-    "timeDay": 268,
-    "timeWeek": 214,
-    "timeMonth": 177,
-    "timeYear": 191,
+    "time": 190,
+    "timeDay": 192,
+    "timeWeek": 185,
+    "timeMonth": 171,
+    "timeYear": 190,
     "dailyMinutesDown": {}
   },
   {
@@ -192,9 +193,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
     "time": 349,
-    "timeDay": 502,
-    "timeWeek": 362,
-    "timeMonth": 336,
+    "timeDay": 415,
+    "timeWeek": 366,
+    "timeMonth": 337,
     "timeYear": 349,
     "dailyMinutesDown": {
       "2026-02-23": 44
