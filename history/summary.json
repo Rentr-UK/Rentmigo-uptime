@@ -126,17 +126,17 @@
     "url": "https://www.vercel-status.com/api/v2/status.json",
     "icon": "https://icons.duckduckgo.com/ip3/www.vercel-status.com.ico",
     "slug": "vercel",
-    "status": "down",
-    "uptime": "99.29%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "99.29%",
-    "time": 330,
-    "timeDay": 142,
-    "timeWeek": 186,
-    "timeMonth": 180,
-    "timeYear": 330,
+    "status": "up",
+    "uptime": "99.25%",
+    "uptimeDay": "93.02%",
+    "uptimeWeek": "99.00%",
+    "uptimeMonth": "99.77%",
+    "uptimeYear": "99.25%",
+    "time": 329,
+    "timeDay": 129,
+    "timeWeek": 177,
+    "timeMonth": 178,
+    "timeYear": 329,
     "dailyMinutesDown": {
       "2026-04-09": 100,
       "2026-06-03": 424,
@@ -145,7 +145,7 @@
       "2026-06-07": 102,
       "2026-06-16": 535,
       "2026-06-18": 274,
-      "2026-07-31": 0
+      "2026-07-31": 100
     }
   },
   {
