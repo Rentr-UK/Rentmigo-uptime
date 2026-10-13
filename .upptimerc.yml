@@ -55,6 +55,8 @@ sites:
       - 200
   - name: Neon
     url: https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c
+    # Absolute URL: also used for the README table.
+    icon: https://rentr-uk.github.io/Rentmigo-uptime/brand/neon.png
     expectedStatusCodes:
       - 200
   - name: Stripe
@@ -68,8 +70,40 @@ sites:
 
 status-website:
   baseUrl: /Rentmigo-uptime
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Rentr UK Status
+  # Brand assets live in assets/brand/ and are copied to the site root on build.
+  logoUrl: /Rentmigo-uptime/brand/rentmigo-logo.png
+  logoHref: https://rentmigo.co.uk
+  favicon: /Rentmigo-uptime/brand/favicon.png
+  name: Rentmigo Status
+  hideNavTitle: true
   theme: light
-  introTitle: "**Rentr UK** uptime monitor and status page."
-  introMessage: Real-time uptime data for Rentr UK services. Target uptime 99.5%.
+  introTitle: "**Rentmigo** system status"
+  introMessage: Live availability of the Rentmigo platform and the services it depends on.
+  navbar:
+    - title: rentmigo.co.uk ↗
+      href: https://rentmigo.co.uk
+      target: _blank
+  metaTags:
+    - name: description
+      content: Live status and 90-day uptime for Rentmigo and the services it depends on.
+  # Loaded after Upptime's own CSS, so these override the default theme.
+  links:
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap
+    - rel: stylesheet
+      href: /Rentmigo-uptime/brand/rentmigo.css
+  # Swaps the response-time graphs for 90-day uptime bars, hides staging, groups cards.
+  scripts:
+    - src: /Rentmigo-uptime/brand/rentmigo.js
+      async: true
+
+i18n:
+  # British date format (DD/MM/YYYY) for incidents and history pages.
+  locale: en-GB
+  allSystemsOperational: All systems operational
+  liveStatus: Live status
+  overallUptime: "Uptime: $UPTIME"
+  averageResponseTime: "Avg response: $TIMEms"
+  footer: "© Rentmigo · [rentmigo.co.uk](https://rentmigo.co.uk) · Powered by [Upptime](https://upptime.js.org)"

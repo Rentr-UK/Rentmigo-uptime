@@ -1,0 +1,558 @@
+/*
+ * Rentmigo theme for the Upptime status page.
+ * Loaded after Upptime's theme + global.css via `status-website.links` in .upptimerc.yml.
+ * Brand tokens mirror Rentr-UK/src/app/globals.css (pinkCustom #f478ba, plum #492437).
+ */
+
+html:root {
+  --rm-pink: #f478ba;
+  --rm-pink-strong: #b82e6c;
+  --rm-pink-soft: #fde7f1;
+  --rm-pink-wash: #fff7fb;
+  --rm-plum: #492437;
+  --rm-ink: #2a1520;
+  --rm-muted: #7a6470;
+  --rm-line: #f1e3ea;
+
+  --rm-up: #16a34a;
+  --rm-up-soft: #e8f7ee;
+  --rm-degraded: #f59e0b;
+  --rm-degraded-soft: #fff4dc;
+  --rm-down: #dc2626;
+  --rm-down-soft: #fdecec;
+  --rm-nodata: #ece4e8;
+
+  --rm-radius: 16px;
+  --rm-shadow: 0 1px 2px 0 #1212170d, 0 8px 24px -12px #49243722;
+
+  /* Upptime theme variables */
+  --body-background-color: var(--rm-pink-wash);
+  --body-text-color: var(--rm-ink);
+  --card-background-color: #ffffff;
+  --card-border-color: var(--rm-line);
+  --nav-background-color: #ffffff;
+  --nav-border-bottom-color: var(--rm-line);
+  --nav-current-border-bottom-color: var(--rm-pink);
+  --up-border-left-color: var(--rm-up);
+  --degraded-border-left-color: var(--rm-degraded);
+  --down-border-left-color: var(--rm-down);
+  --down-background-color: var(--rm-down-soft);
+  --tag-color: #ffffff;
+  --tag-up-background-color: var(--rm-up);
+  --tag-down-background-color: var(--rm-down);
+  --tag-degraded-background-color: var(--rm-degraded);
+  --change-background-color: var(--rm-pink-soft);
+  --error-button-border-color: var(--rm-pink);
+  --error-button-background-color: var(--rm-pink);
+  --error-button-color: #ffffff;
+  --submit-button-border-color: var(--rm-pink);
+  --submit-button-background-color: var(--rm-pink);
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+
+html body {
+  font-family: Geist, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(1200px 400px at 50% -120px, var(--rm-pink-soft), transparent 70%),
+    var(--rm-pink-wash);
+  color: var(--rm-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+html h1,
+html h2,
+html h3,
+html h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rm-plum);
+}
+
+html a {
+  color: var(--rm-pink-strong);
+}
+
+.container {
+  max-width: 880px;
+  padding: 0 1rem;
+}
+
+/* ---------- Nav ---------- */
+
+html nav {
+  border-bottom: 1px solid var(--rm-line);
+  background: #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff;
+  padding: 0;
+}
+
+nav .container {
+  padding: 0 1rem;
+}
+
+nav .logo {
+  padding: 1rem 0 !important;
+  margin-right: 1rem !important;
+}
+
+nav .logo img {
+  height: 30px !important;
+  margin-right: 0 !important;
+  border-radius: 0 !important;
+}
+
+nav ul a {
+  padding: 0.5rem 1rem !important;
+  border-radius: 999px;
+  font-weight: 500;
+  color: var(--rm-plum);
+}
+
+nav ul a:hover {
+  background: var(--rm-pink-soft);
+}
+
+nav [aria-current] {
+  border-bottom: 0;
+  background: var(--rm-pink-soft);
+}
+
+/* ---------- Hero ---------- */
+
+main > header {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.25rem;
+  padding: 2rem 11rem 2rem 2rem;
+  border-radius: 24px;
+  background: var(--rm-plum);
+  color: #ffffff;
+  min-height: 9rem;
+  box-sizing: border-box;
+}
+
+main > header::after {
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  bottom: -2.25rem;
+  width: 8.5rem;
+  height: 11.5rem;
+  background: url("llama.png") no-repeat bottom right / contain;
+  pointer-events: none;
+}
+
+main > header h1 {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  margin-bottom: 0.5rem;
+}
+
+main > header h1 strong {
+  color: var(--rm-pink);
+}
+
+main > header .lead {
+  margin: 0;
+  color: #f6dbe8;
+  font-size: 1.05rem;
+}
+
+/* ---------- Overall status banner + active incidents ---------- */
+
+main > article {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.5rem;
+  border-radius: var(--rm-radius);
+  border: 1px solid transparent;
+  border-left-width: 1px !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: var(--rm-shadow);
+}
+
+main > article.up {
+  background: var(--rm-up-soft);
+  border-color: #c6ebd4 !important;
+  color: #11632f;
+}
+
+main > article.up::before,
+.rm-pill::before {
+  content: "";
+  flex: none;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+main > article.up::before {
+  background: var(--rm-up);
+  box-shadow: 0 0 0 0 #16a34a66;
+  animation: rm-pulse 2.4s ease-out infinite;
+}
+
+@keyframes rm-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #16a34a66;
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 10px #16a34a00;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > article.up::before {
+    animation: none;
+  }
+}
+
+main > section article.down-active {
+  border-radius: var(--rm-radius);
+  border: 1px solid #f6c9c9;
+  border-left: 4px solid var(--rm-down) !important;
+  background: var(--rm-down-soft);
+}
+
+main > section article.down-active.degraded {
+  border-color: #f8dfa8;
+  border-left-color: var(--rm-degraded) !important;
+  background: var(--rm-degraded-soft);
+}
+
+/* ---------- Range switcher ---------- */
+
+main h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+main .f.r {
+  gap: 2px;
+  padding: 3px;
+  background: #ffffff;
+  border: 1px solid var(--rm-line);
+  border-radius: 999px;
+}
+
+main .f.r label {
+  display: block;
+  margin: 0 !important;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--rm-muted);
+  cursor: pointer;
+}
+
+main .f.r input:checked + label {
+  background: var(--rm-pink);
+  color: #ffffff;
+  font-weight: 600 !important;
+}
+
+main .f.r input:focus-visible + label {
+  outline: 2px solid var(--rm-pink-strong);
+  outline-offset: 1px;
+}
+
+/* ---------- Service cards ---------- */
+
+.live-status {
+  margin-top: 0.75rem;
+}
+
+.rm-group {
+  margin: 1.75rem 0 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rm-muted);
+  opacity: 1;
+}
+
+.rm-group:first-child {
+  margin-top: 0.5rem;
+}
+
+section.live-status article {
+  padding: 1.1rem 1.4rem 1rem;
+  border-radius: var(--rm-radius);
+  border: 1px solid var(--rm-line) !important;
+  box-shadow: var(--rm-shadow);
+  color: var(--rm-ink);
+  background-color: #ffffff;
+  /* Response-time graph removed: it read like downtime. Replaced by uptime bars (rentmigo.js). */
+  background-image: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+section.live-status article:hover {
+  border-color: #f4c3dc !important;
+}
+
+.live-status article + article {
+  margin-top: 0.75rem;
+}
+
+.live-status article h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.live-status article h4 .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  transform: none;
+  border-radius: 4px;
+}
+
+.live-status article h4 a {
+  color: var(--rm-plum);
+}
+
+.live-status article > div:not(.rm-bars):not(.rm-legend) {
+  display: inline-flex;
+  gap: 0.35rem;
+  margin-right: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--rm-muted);
+}
+
+.live-status .data {
+  padding: 0;
+  font-weight: 600;
+  color: var(--rm-plum);
+}
+
+.rm-hidden {
+  display: none !important;
+}
+
+/* Status pill */
+
+.rm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.rm-pill::before {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.rm-pill.up {
+  color: #11632f;
+  background: var(--rm-up-soft);
+}
+
+.rm-pill.degraded {
+  color: #8a5300;
+  background: var(--rm-degraded-soft);
+}
+
+.rm-pill.down {
+  color: #a11b1b;
+  background: var(--rm-down-soft);
+}
+
+/* Uptime bars */
+
+.rm-bars {
+  position: relative;
+  z-index: 1; /* above Upptime's full-card link overlay so bars are hoverable */
+  display: flex;
+  gap: 2px;
+  height: 34px;
+  margin: 0.9rem 0 0.4rem;
+}
+
+.rm-bar {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 2px;
+  border-radius: 3px;
+  background: var(--rm-up);
+  opacity: 0.85;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+.rm-bar:hover {
+  opacity: 1;
+  transform: scaleY(1.08);
+}
+
+.rm-bar.partial {
+  background: var(--rm-degraded);
+}
+
+.rm-bar.major {
+  background: var(--rm-down);
+}
+
+.rm-bar.nodata {
+  background: var(--rm-nodata);
+}
+
+.rm-bar::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  background: var(--rm-plum);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: pre;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease;
+  z-index: 2;
+}
+
+.rm-bar.tip-left::after {
+  left: 0;
+  transform: none;
+}
+
+.rm-bar.tip-right::after {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.rm-bar:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rm-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--rm-muted);
+}
+
+.rm-legend::before,
+.rm-legend::after {
+  content: "";
+  order: 2;
+  flex: 1;
+  height: 1px;
+  background: var(--rm-line);
+}
+
+.rm-legend::after {
+  order: 4;
+}
+
+.rm-legend .rm-start {
+  order: 1;
+}
+
+.rm-legend .rm-uptime {
+  order: 3;
+  font-weight: 600;
+  color: var(--rm-plum);
+}
+
+.rm-legend .rm-end {
+  order: 5;
+}
+
+.rm-legend .rm-short {
+  display: none;
+}
+
+/* Phones: show the last 30 days so bars stay tappable */
+@media (max-width: 600px) {
+  main > header {
+    padding: 1.5rem 7rem 1.5rem 1.25rem;
+  }
+
+  main > header::after {
+    width: 6rem;
+    height: 8rem;
+    right: 0.5rem;
+    bottom: -1.5rem;
+  }
+
+  main .f {
+    gap: 0.75rem;
+  }
+
+  .live-status article {
+    padding: 1rem;
+  }
+
+  .rm-bar:nth-child(-n + 60) {
+    display: none;
+  }
+
+  .rm-legend .rm-long {
+    display: none;
+  }
+
+  .rm-legend .rm-short {
+    display: inline;
+  }
+}
+
+/* ---------- History / incident pages ---------- */
+
+main h1 > a {
+  color: var(--rm-plum);
+}
+
+main > article.link,
+main section > article {
+  border-radius: var(--rm-radius);
+}
+
+.tag {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.submit-button,
+a.error-button {
+  border-radius: 999px;
+}
+
+/* ---------- Footer ---------- */
+
+html footer {
+  font-size: 0.875rem;
+  color: var(--rm-muted);
+  opacity: 1 !important;
+}
+
+footer a {
+  color: var(--rm-pink-strong);
+}
