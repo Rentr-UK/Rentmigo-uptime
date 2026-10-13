@@ -5,6 +5,8 @@
  *   built from history/summary.json (dailyMinutesDown).
  * - Hides internal (staging) monitors from the public page.
  * - Strips the "[Prod] " prefix and groups cards into Rentmigo / third-party.
+ * - Removes links to GitHub (issues, commits, profiles) and developer @handles,
+ *   since this page is public-facing.
  *
  * Upptime re-renders with Svelte, so everything here is idempotent and re-run
  * from a MutationObserver.
@@ -190,23 +192,79 @@
     if (heading.nextElementSibling !== before) section.insertBefore(heading, before);
   }
 
+  function replaceText(node, re, by) {
+    re.lastIndex = 0;
+    if (node && node.nodeType === 3 && re.test(node.nodeValue)) {
+      node.nodeValue = node.nodeValue.replace(re, by);
+    }
+  }
+
   function enhanceIncidents() {
-    // Hide open incidents that only concern internal monitors.
-    document.querySelectorAll("main > section article.down-active").forEach(function (article) {
+    // Hide incidents (open and past) that only concern internal monitors.
+    document.querySelectorAll("main section article.down").forEach(function (article) {
       var title = article.querySelector("h4");
       if (title && /\[Staging\]/i.test(title.textContent)) article.classList.add("rm-hidden");
     });
+    // Past-incident lists group by date; hide a date heading once all its incidents are hidden.
+    document.querySelectorAll("main section > h3").forEach(function (h3) {
+      var el = h3.nextElementSibling;
+      var visible = false;
+      while (el && el.tagName === "ARTICLE") {
+        if (!el.classList.contains("rm-hidden")) visible = true;
+        el = el.nextElementSibling;
+      }
+      h3.classList.toggle("rm-hidden", !visible);
+    });
     // Drop the hard-coded emoji from the overall status banner; CSS draws a status dot.
     var banner = document.querySelector("main > article.up");
-    if (banner && banner.firstChild && banner.firstChild.nodeType === 3) {
-      var cleaned = banner.firstChild.nodeValue.replace(/^\s*✅\s*/, "");
-      if (cleaned !== banner.firstChild.nodeValue) banner.firstChild.nodeValue = cleaned;
+    if (banner) replaceText(banner.firstChild, /^\s*✅\s*/, "");
+    // Tidy the "[Prod] " prefix in page headings and incident titles.
+    document.querySelectorAll("main h1, main h1 > a, main h2, main section article h4").forEach(function (h) {
+      replaceText(h.firstChild, /\[Prod\]\s*/i, "");
+    });
+  }
+
+  function isGitHubUrl(href) {
+    try {
+      return /(^|\.)(github\.com|githubusercontent\.com)$/i.test(new URL(href, location.href).hostname);
+    } catch (e) {
+      return false;
     }
-    // History pages: tidy the "[Prod] " prefix in headings.
-    document.querySelectorAll("main h1, main h1 > a, main h2").forEach(function (h) {
-      var node = h.firstChild;
-      if (node && node.nodeType === 3 && PREFIX.test(node.nodeValue)) {
-        node.nodeValue = node.nodeValue.replace(PREFIX, "");
+  }
+
+  // Public page: no links to the GitHub repo/issues/commits and no developer handles.
+  function stripGitHub() {
+    document.querySelectorAll("main a").forEach(function (a) {
+      var href = a.getAttribute("href");
+      var text = a.textContent.trim();
+      if (href === "undefined" || href === "") {
+        // Upptime's comment markdown renders "[Prod] Website" as a broken link: drop "Prod ".
+        if (/^(Prod|Staging)$/i.test(text)) {
+          replaceText(a.nextSibling, /^\s+/, "");
+          a.remove();
+        } else {
+          a.replaceWith(document.createTextNode(a.textContent));
+        }
+        return;
+      }
+      if (!isGitHubUrl(a.href)) return;
+      if (/^[0-9a-f]{7,40}$/i.test(text)) {
+        // Commit reference: "... back up in <sha> after ..." -> "... back up after ..."
+        replaceText(a.previousSibling, /\s+in\s*$/i, "");
+        a.remove();
+      } else if (!text || /^@/.test(text)) {
+        // "View on GitHub" (blanked via i18n) and author profile links.
+        a.remove();
+      } else {
+        a.replaceWith(document.createTextNode(a.textContent));
+      }
+    });
+    // @handles typed into incident updates.
+    document.querySelectorAll("main section article").forEach(function (article) {
+      var walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT);
+      var node;
+      while ((node = walker.nextNode())) {
+        replaceText(node, /(^|\s)@[a-z0-9](?:[a-z0-9-]{0,38})\b/gi, "$1");
       }
     });
   }
@@ -221,6 +279,7 @@
         groupCards(section);
       });
       enhanceIncidents();
+      stripGitHub();
     } finally {
       observer.observe(document.body, {
         childList: true,

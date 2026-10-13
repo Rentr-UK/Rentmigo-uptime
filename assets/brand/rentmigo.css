@@ -530,6 +530,15 @@ main h1 > a {
   color: var(--rm-plum);
 }
 
+/* Public page: never show GitHub links (rentmigo.js unwraps or removes them; this
+   covers the moment before it runs). The rate-limit page's GitHub token form too. */
+main a[href*="github.com"],
+main a[href="undefined"],
+main > form,
+main > button {
+  display: none !important;
+}
+
 main > article.link,
 main section > article {
   border-radius: var(--rm-radius);

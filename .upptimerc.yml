@@ -108,3 +108,14 @@ i18n:
   overallUptime: "Uptime: $UPTIME"
   averageResponseTime: "Avg response: $TIMEms"
   footer: "© Rentmigo · [rentmigo.co.uk](https://rentmigo.co.uk) · Powered by [Upptime](https://upptime.js.org)"
+  # Public page: no GitHub links or developer names (rentmigo.js removes the rest).
+  incidentViewOnGitHub: ""
+  incidentCommentSummary: Posted at $DATE
+  pastIncidentsResolved: Resolved in $MINUTES minutes
+  rateLimitExceededTitle: Please try again shortly
+  rateLimitExceededIntro: We couldn't load the latest status details right now because too many requests were made from your network.
+  rateLimitExceededWhatDoesErrorMean: What does this mean?
+  rateLimitExceededErrorMeaning: This page loads live data from our monitoring service, which limits how often it can be requested from one network.
+  rateLimitExceededErrorHowCanFix: What can I do?
+  rateLimitExceededErrorFix: Please wait a few minutes and refresh the page.
+  rateLimitExceededGeneratePAT: ""
