@@ -55,6 +55,8 @@ sites:
       - 200
   - name: Neon
     url: https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c
+    # Absolute URL: also used for the README table.
+    icon: https://status.rentmigo.co.uk/brand/neon.png
     expectedStatusCodes:
       - 200
   - name: Stripe
@@ -67,9 +69,53 @@ sites:
       - 200
 
 status-website:
-  baseUrl: /Rentmigo-uptime
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Rentr UK Status
+  # Served at the domain root; needs DNS: CNAME status -> rentr-uk.github.io
+  cname: status.rentmigo.co.uk
+  # Brand assets live in assets/brand/ and are copied to the site root on build.
+  logoUrl: /brand/rentmigo-logo.png
+  logoHref: https://rentmigo.co.uk
+  favicon: /brand/favicon.png
+  name: Rentmigo Status
+  hideNavTitle: true
   theme: light
-  introTitle: "**Rentr UK** uptime monitor and status page."
-  introMessage: Real-time uptime data for Rentr UK services. Target uptime 99.5%.
+  introTitle: "**Rentmigo** system status"
+  introMessage: Live availability of the Rentmigo platform and the services it depends on.
+  navbar:
+    - title: rentmigo.co.uk ↗
+      href: https://rentmigo.co.uk
+      target: _blank
+  metaTags:
+    - name: description
+      content: Live status and 90-day uptime for Rentmigo and the services it depends on.
+  # Loaded after Upptime's own CSS, so these override the default theme.
+  links:
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap
+    - rel: stylesheet
+      href: /brand/rentmigo.css
+  # Swaps the response-time graphs for 90-day uptime bars, hides staging, groups cards.
+  scripts:
+    - src: /brand/rentmigo.js
+      async: true
+
+i18n:
+  # British date format (DD/MM/YYYY) for incidents and history pages.
+  locale: en-GB
+  allSystemsOperational: All systems operational
+  liveStatus: Live status
+  overallUptime: "Uptime: $UPTIME"
+  averageResponseTime: "Avg response: $TIMEms"
+  footer: "© Rentmigo · [rentmigo.co.uk](https://rentmigo.co.uk) · Powered by [Upptime](https://upptime.js.org)"
+  # Public page: no GitHub links or developer names (rentmigo.js removes the rest).
+  incidentViewOnGitHub: ""
+  incidentCommentSummary: Posted at $DATE
+  pastIncidentsResolved: Resolved in $MINUTES minutes
+  rateLimitExceededTitle: Please try again shortly
+  rateLimitExceededIntro: We couldn't load the latest status details right now because too many requests were made from your network.
+  rateLimitExceededWhatDoesErrorMean: What does this mean?
+  rateLimitExceededErrorMeaning: This page loads live data from our monitoring service, which limits how often it can be requested from one network.
+  rateLimitExceededErrorHowCanFix: What can I do?
+  rateLimitExceededErrorFix: Please wait a few minutes and refresh the page.
+  rateLimitExceededGeneratePAT: ""
