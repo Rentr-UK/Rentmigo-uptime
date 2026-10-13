@@ -72,9 +72,9 @@ status-website:
   # Served at the domain root; needs DNS: CNAME status -> rentr-uk.github.io
   cname: status.rentmigo.co.uk
   # Brand assets live in assets/brand/ and are copied to the site root on build.
-  logoUrl: /brand/rentmigo-logo.png
+  logoUrl: https://status.rentmigo.co.uk/brand/rentmigo-logo.png
   logoHref: https://rentmigo.co.uk
-  favicon: /brand/favicon.png
+  favicon: https://status.rentmigo.co.uk/brand/favicon.png
   name: Rentmigo Status
   hideNavTitle: true
   theme: light
@@ -94,10 +94,10 @@ status-website:
     - rel: stylesheet
       href: https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap
     - rel: stylesheet
-      href: /brand/rentmigo.css
+      href: https://status.rentmigo.co.uk/brand/rentmigo.css
   # Swaps the response-time graphs for 90-day uptime bars, hides staging, groups cards.
   scripts:
-    - src: /brand/rentmigo.js
+    - src: https://status.rentmigo.co.uk/brand/rentmigo.js
       async: true
 
 i18n:
