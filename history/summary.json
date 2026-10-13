@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 1443,
-    "timeDay": 2096,
-    "timeWeek": 1905,
-    "timeMonth": 1683,
-    "timeYear": 1443,
+    "time": 1447,
+    "timeDay": 2195,
+    "timeWeek": 1954,
+    "timeMonth": 1702,
+    "timeYear": 1447,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 574,
-    "timeDay": 900,
-    "timeWeek": 802,
+    "time": 575,
+    "timeDay": 833,
+    "timeWeek": 797,
     "timeMonth": 755,
-    "timeYear": 574,
+    "timeYear": 575,
     "dailyMinutesDown": {
       "2026-02-23": 43
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 887,
-    "timeDay": 437,
-    "timeWeek": 870,
-    "timeMonth": 607,
-    "timeYear": 887,
+    "time": 884,
+    "timeDay": 368,
+    "timeWeek": 798,
+    "timeMonth": 597,
+    "timeYear": 884,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -70,11 +70,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 4313,
-    "timeDay": 5285,
-    "timeWeek": 5198,
-    "timeMonth": 4973,
-    "timeYear": 4313,
+    "time": 4301,
+    "timeDay": 3384,
+    "timeWeek": 4734,
+    "timeMonth": 4860,
+    "timeYear": 4301,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -90,11 +90,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 694,
-    "timeDay": 951,
-    "timeWeek": 833,
-    "timeMonth": 805,
-    "timeYear": 694,
+    "time": 695,
+    "timeDay": 969,
+    "timeWeek": 852,
+    "timeMonth": 811,
+    "timeYear": 695,
     "dailyMinutesDown": {
       "2026-02-23": 44
     }
@@ -110,11 +110,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.94%",
-    "time": 3392,
-    "timeDay": 4553,
-    "timeWeek": 4098,
-    "timeMonth": 4081,
-    "timeYear": 3392,
+    "time": 3383,
+    "timeDay": 2960,
+    "timeWeek": 3757,
+    "timeMonth": 3993,
+    "timeYear": 3383,
     "dailyMinutesDown": {
       "2026-02-23": 44,
       "2026-04-11": 61,
@@ -132,11 +132,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.42%",
-    "time": 285,
-    "timeDay": 85,
-    "timeWeek": 191,
-    "timeMonth": 185,
-    "timeYear": 285,
+    "time": 284,
+    "timeDay": 154,
+    "timeWeek": 195,
+    "timeMonth": 186,
+    "timeYear": 284,
     "dailyMinutesDown": {
       "2026-04-09": 100,
       "2026-06-03": 424,
@@ -154,7 +154,7 @@
   {
     "name": "Neon",
     "url": "https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c",
-    "icon": "https://icons.duckduckgo.com/ip3/api.status.io.ico",
+    "icon": "https://status.rentmigo.co.uk/brand/neon.png",
     "slug": "neon",
     "status": "up",
     "uptime": "100.00%",
@@ -162,11 +162,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 342,
-    "timeDay": 97,
-    "timeWeek": 850,
-    "timeMonth": 422,
-    "timeYear": 342,
+    "time": 341,
+    "timeDay": 123,
+    "timeWeek": 762,
+    "timeMonth": 413,
+    "timeYear": 341,
     "dailyMinutesDown": {}
   },
   {
@@ -181,8 +181,8 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 171,
-    "timeDay": 66,
-    "timeWeek": 142,
+    "timeDay": 110,
+    "timeWeek": 144,
     "timeMonth": 160,
     "timeYear": 171,
     "dailyMinutesDown": {}
@@ -199,8 +199,8 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
     "time": 354,
-    "timeDay": 349,
-    "timeWeek": 395,
+    "timeDay": 353,
+    "timeWeek": 390,
     "timeMonth": 358,
     "timeYear": 354,
     "dailyMinutesDown": {
