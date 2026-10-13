@@ -56,7 +56,7 @@ sites:
   - name: Neon
     url: https://api.status.io/1.0/status/6878fc85709daa75be6c7e3c
     # Absolute URL: also used for the README table.
-    icon: https://rentr-uk.github.io/Rentmigo-uptime/brand/neon.png
+    icon: https://status.rentmigo.co.uk/brand/neon.png
     expectedStatusCodes:
       - 200
   - name: Stripe
@@ -69,11 +69,12 @@ sites:
       - 200
 
 status-website:
-  baseUrl: /Rentmigo-uptime
+  # Served at the domain root; needs DNS: CNAME status -> rentr-uk.github.io
+  cname: status.rentmigo.co.uk
   # Brand assets live in assets/brand/ and are copied to the site root on build.
-  logoUrl: /Rentmigo-uptime/brand/rentmigo-logo.png
+  logoUrl: /brand/rentmigo-logo.png
   logoHref: https://rentmigo.co.uk
-  favicon: /Rentmigo-uptime/brand/favicon.png
+  favicon: /brand/favicon.png
   name: Rentmigo Status
   hideNavTitle: true
   theme: light
@@ -93,10 +94,10 @@ status-website:
     - rel: stylesheet
       href: https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap
     - rel: stylesheet
-      href: /Rentmigo-uptime/brand/rentmigo.css
+      href: /brand/rentmigo.css
   # Swaps the response-time graphs for 90-day uptime bars, hides staging, groups cards.
   scripts:
-    - src: /Rentmigo-uptime/brand/rentmigo.js
+    - src: /brand/rentmigo.js
       async: true
 
 i18n:
